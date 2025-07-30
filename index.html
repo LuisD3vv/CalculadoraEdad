@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <title>Calculadora de edad</title>
+  </head>
+
+  <body>
+    <div class="atras">
+        <h1 class="main_head">Calcula Tu edad</h1></div>
+    <div class="contenedor">
+      <h1 class="nacimiento">Ingresa tu fecha de nacimiento</h1>
+      <section class="input_user">
+        <div class="campo">
+          <label for="dia">Dia</label>
+          <br />
+          <input
+            type="number"
+            id="dia"
+            name="dia"
+            placeholder="Ingresa el dia"
+            max="31"
+            min="1"
+          />
+        </div>
+        <div class="campo">
+          <label for="mes">Mes</label>
+          <br />
+          <input
+            type="number"
+            id="mes"
+            name="mes"
+            placeholder="Ingresa el mes"
+            max="31"
+            min="1"
+          />
+        </div>
+        <div class="campo">
+          <label for="anio">Año</label>
+          <br />
+          <input
+            type="number"
+            id="anio"
+            name="anio"
+            placeholder="Ingresa el año"
+            max="9999"
+            min="1"
+          />
+        </div>
+      </section>
+      <div class="middle">
+        <p>Conoce tu edad-></p>
+        <button id="validarInputs" onclick="conversion()">
+        Calcular</button>
+      </div>
+      <hr />
+      <h2 class="ctually">EDAD ACTUAL</h2>
+      <section class="output_user">
+        <p id="anio_output">--<span>Años</span></p>
+        <p id="mes_output">--<span>Mes</span></p>
+        <p id="dia_output">--<span>Dia</span></p>
+      </section>
+    </div>
+    <p class="gratefoul">Creado con &#128420; por LissandroD3v.</p>
+    <script type="text/javascript" src="Script.js"></script>
+  </body>
+</html>
