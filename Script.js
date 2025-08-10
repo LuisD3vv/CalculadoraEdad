@@ -56,37 +56,19 @@ function conversion() {
       edad_meses += 12;
       edad_anios--;
     }
-   // EL innerHTML es para cambiar le valor interno del html
+
+
+
+    // EL innerHTML es para cambiar le valor interno del html
     // Mostrar el resultado
     document.getElementById("dia_output").innerHTML = `${edad_dias} <span>Días</span>`;
     document.getElementById("mes_output").innerHTML = `${edad_meses} <span>Meses</span>`;
     document.getElementById("anio_output").innerHTML = `${edad_anios} <span>Años</span>`;
   }
 
-
-
-
-// Imagina que quieres calcular cuántos días has vivido si tu cumpleaños es el 15 de julio de 1995.
-
-// Pasos:
-
-//     Usa la fecha actual para calcular cuántos años han pasado desde tu cumpleaños.
-
-//     Convierte esos años a meses y días (supón que un año tiene 365 días).
-
-//     Muestra un mensaje que diga:
-//     "Desde tu cumpleaños el 15 de julio de 1995, has vivido X años, Y meses y Z días."
-
-// Pistas:
-
-//     Puedes usar new Date() para obtener la fecha actual.
-
-//     Para calcular los años transcurridos, puedes restar el año de tu cumpleaños al año actual.
-
-//     Para obtener los meses y los días, haz las conversiones apropiadas usando los cálculos.
-
-// Ejemplo de salida:
-
-// Desde tu cumpleaños el 15 de julio de 1995, has vivido 30 años, 7 meses y 15 días.
-
-// ¡Hazlo paso a paso y usa las plantillas literales para formatear la cadena!
+// Regresar al principio para ver el resultado
+const boton = document.getElementById("validarInputs")
+boton.addEventListener("click", () => {
+    // funcion que nos dice, scroll para?, y  el primer elemento fue el id a donde queremos ir
+    window.scrollTo({top: 0, behavior: "smooth"});
+})
