@@ -1,31 +1,40 @@
 
 function conversion() {
-    // Obtener los valores de los inputs
+    // Obtener los valores de los inputs en strings
 
     let dia_b = document.getElementById("dia").value;
     let mes_b = document.getElementById("mes").value;
     let anio_b = document.getElementById("anio").value;
-    
+
+    const day = document.getElementById("dia_output")
+    const mes = document.getElementById("mes_output")
+    const anio = document.getElementById("anio_output")
+
+    let numberday = Number(dia_b)
+    let numbermonth = Number(mes_b)
+    let numberyear = Number(anio_b)
     
     // Asegurarse de que los campos no estén vacíos
     if (!dia_b || !mes_b || !anio_b) {
       alert("Por favor ingresa todos los datos.")
       return;
     }
-    else if (dia_b > 31 || mes_b > 12 || anio_b > 3000) {
-      alert("porfavor, ingresa correctamente los datos solicitados.");
-      return;
+    else if(numberday > 31 ) {
+        alert("El dia no debe ser mayor a 31");
+        return;
+    }
+    else if(numbermonth > 31 ) {
+        alert("El mes no debe ser mayor a 31");
+        return;
+    }
+    else if (numberyear > 3000 ) {
+        alert("El anio no debe ser mayor a 3000");
+        return;
     }
     else if (dia_b < 0 || mes_b < 0  || anio_b < 0 ) {
       alert("Los datos no deben de ser negativos");
       return;
     }
-
-    // Convertir las entradas a números
-    dia_b = parseInt(dia_b);
-    mes_b = parseInt(mes_b);
-    anio_b = parseInt(anio_b);
-  
     // Obtener la fecha actual
     const fecha_actual = new Date();
     const dia_actual = fecha_actual.getDate();

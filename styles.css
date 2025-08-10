@@ -24,11 +24,20 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
 Body {
   background-color: #222;
   font-family: var(--FuentePrincipal);
 }
 .contenedor {
+    display: flex;
+    flex-direction: column;
   background-color: var(--White);
   margin: 1rem auto;
   width: min(60rem, 95%);
@@ -192,20 +201,90 @@ button {
 }
 button:hover {
     border-radius: 10px;
-
     background-color: var(--Purple_500);
     color: var(--White);
-transition:all ease 0.3s;
-width: 150px;
+    transition:all ease 0.3s;
+    width: 150px;
 }
 button:focus {
-  border-radius: 10px;
-
+    border-radius: 10px;
     background-color: var(--Purple_500);
     color: var(--White);
-transition:all ease 0.3s;
-width: 150px;
+    transition:all ease 0.3s;
+    width: 150px;
 }
 button:active {
   border: 3px solid black;
+}
+
+@media (max-width: 45rem) {
+    .contenedor {height: 100%;
+    background-color: transparent;
+    box-shadow: 0 0 1px 2px grey;
+    padding: 1rem}
+    .input_user {flex-direction: column;
+    }
+    .middle {
+        order: 1;
+        height: 100%;
+        flex-direction: column;
+        background-color: var(--White);
+    }
+    .output_user {
+        order: -1;
+        flex-direction: column;
+        border-radius: 0;
+        height: 100%;
+        width: 95%;
+        border-radius: 5px;
+        background-color: var(--White);
+
+    }
+    .nacimiento{
+        order: 0;
+padding: 1rem    }
+    .gratefoul,.main_head,.ctually ,hr  {
+        display: none;
+    }
+    .output_user p {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        margin: 5px;
+        background-color: #222;
+    }
+    .campo {
+        padding: 2rem;
+    }
+    .campo:hover {
+        box-shadow: 0 0 1px 2px green;
+
+    }
+    label {
+        letter-spacing: 4px;
+        padding-bottom: 2rem;
+        }
+    input {
+        width: 100% !important;
+        border: none !important;
+        padding: 3rem ;
+    }
+    input:focus {
+        background-color: rgba(153, 153, 153, 0.13);
+    }
+    input::placeholder {
+        color: var(--White);
+        font-size: 1.5rem;
+        opacity: 20%;
+
+    }
+    #validarInputs {
+    background-color: var(--Purple_500);
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    }
+
 }
