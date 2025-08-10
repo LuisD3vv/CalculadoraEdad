@@ -38,6 +38,7 @@ Body {
 .contenedor {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   background-color: var(--White);
   margin: 1rem auto;
   width: min(60rem, 95%);
@@ -130,19 +131,18 @@ p {
 }
 .output_user p {
   font-size: 41px;
-  border-radius: 5px;
-  background-color: #3632327e;
+  border-radius: 5px;border-top: 1px solid grey;
 }
 .output_user {
   display: flex;
   text-align: center;
   justify-content: space-between;
-  width: auto;
-  max-width: 50rem;
+  width: min(50rem,95%);
   margin: 3rem auto;
   padding: 2rem;
   background-color: #222;
   border-radius: 5px;
+    gap: 1rem;
 
 }
 h2 {
@@ -219,9 +219,10 @@ button:active {
 
 @media (max-width: 45rem) {
     .contenedor {height: 100%;
+        margin-top: -5rem;
     background-color: transparent;
-    box-shadow: 0 0 1px 2px grey;
-    padding: 1rem}
+    padding: 1rem;
+    width: 100%}
     .input_user {flex-direction: column;
     }
     .middle {
@@ -233,7 +234,6 @@ button:active {
     .output_user {
         order: -1;
         flex-direction: column;
-        border-radius: 0;
         height: 100%;
         width: 95%;
         border-radius: 5px;
